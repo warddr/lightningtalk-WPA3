@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/monokai.min.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Wi-Fi Protected Access 3</h2>
+					<h4>overview of the cool new features</h4>
+					<p>Ward De Ridder, ON8WR</p>
+					<p><small>6th of August 2023 <br /> @BornHack</small></p>
+				</section>
+				<section>
+					<h3>History of WLAN security</h3>
+					<p>1991 - 2018</p>
+				</section>
+				
+				<section class="fragments">
+					<h3>IEE 802.11b</h3>
+					<ul>
+						<li>released in 1997</li>
+						<li>WEP</li>
+						<li>RC4 rolling key</li>
+						<li>under 10 minutes to crack</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>WPA</h3>
+					<ul>
+						<li>released in 2003</li>
+						<li>still uses RC4</li>
+						<li>different key per packet</li>
+						<li>old cards can be updated</li>
+						<li>WPA-Enterprise</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>WPA 2 - 802.11i</h3>
+					<ul>
+						<li>released in 2004</li>
+						<li>AES</li>
+						<li>offline brute-force attack</li>
+						<li>deauthentication attack</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>802.11w - MFP</h3>
+					<ul>
+						<li>Management Frame Protection</li>
+						<li>optional in WPA2</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>WPA3 - 2018 PSK</h3>
+					<ul>
+						<li>longer keys</li>
+						<li>MFP required</li>
+						<li>Simultanious Authentication of Equals</li>
+						<ul>
+							<li>no offline attack</li>
+						</ul>
+					</ul>
+				</section>
+
+				<section>
+					<h3>WPA3: Enhanced open</h3>
+					<ul>
+						<li>encrypts open Wi-Fi</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>WPA3: DPP</h3>
+					<ul>
+						<li>Device Provisioning Protocol</li>
+						<li>Replaces WPS</li>
+						<li>Onboarding IoT devices</li>
+						<ul>
+							<li>QR-code with public key</li>
+						</ul>
+					</ul>
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/notes/notes.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/markdown/markdown.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+                                controls: true,
+                                progress: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
